@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:input="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Customer Registration Form</title>
@@ -31,6 +31,16 @@
           th:if="${#fields.hasErrors('lastName')}"
           th:errors="*{lastName}"
           class="error"
+        ></span>
+
+        <br><br>
+
+        Free passes: <input type="text" th:field="*{freePasses}">
+
+        <span
+            th:if="${#fields.hasErrors('freePasses')}"
+            th:errors="*{freePasses}"
+            class="error"
         ></span>
 
         <br><br>
